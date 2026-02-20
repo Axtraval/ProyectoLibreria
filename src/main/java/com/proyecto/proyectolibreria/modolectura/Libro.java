@@ -1,6 +1,6 @@
 package com.proyecto.proyectolibreria.modolectura;
 
-public class Libro {
+public abstract class Libro {
 
         String autor;
         int anio;
@@ -16,7 +16,11 @@ public class Libro {
             this.anio = anio;
         }
 
-        public int getAnio() {return anio;}
+    //metodos
+    public abstract String mostrarInfo();
+    public String MostrarPrecio(){return "El libro cuesta "+precio+" puntos"; }
+
+    public int getAnio() {return anio;}
         public String getAutor() {return autor;}
         public String getGenero() {return genero;}
         public int getPrecio() {return precio;}
@@ -28,8 +32,5 @@ public class Libro {
         public void setPrecio(int precio) {this.precio = precio;}
         public void setTitulo(String titulo) {this.titulo = titulo;}
 
-        //metodos
-        public String mostrarInfo(){ return "El libro <<"+titulo+">> fue publicado en "+anio+" por: "+autor;}
-        public String MostrarPrecio(){return "El libro cuesta "+precio+" puntos"; }
 
 }

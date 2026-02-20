@@ -6,4 +6,11 @@ public class Lectura extends Libro{
 
     }
 
+    public String mostrarcontenido(){
+        return "mostrando contenido de "+titulo;
+    }
+
+    public String mostrarInfo(){return titulo+""+autor+""+genero;}
+
+
 }

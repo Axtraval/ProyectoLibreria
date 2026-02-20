@@ -13,7 +13,6 @@ public class Ilustrado extends Libro{
         return isAcolor;
     }
 
-
     public void setImgVisualized(boolean isAcolor) {
         this.isAcolor = isAcolor;
     }
@@ -23,8 +22,8 @@ public class Ilustrado extends Libro{
         else return "es a color";
     }
 
-
-
+    @Override
+    public String mostrarInfo(){return titulo+""+precio+""+isAcolor+frecuency()+Formato();}
     public String frecuency(){
         return "La frecuencia de actualización es de "+frecuency+" veces por semana";
     }
