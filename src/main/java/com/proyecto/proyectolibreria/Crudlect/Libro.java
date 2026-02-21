@@ -4,7 +4,7 @@ public class Libro {
     private int id;
     private String titulo;
 
-    public Libro(int num, String titulo) {
+    public Libro(int id, String titulo) {
         this.id = id;
         this.titulo = titulo;
     }
