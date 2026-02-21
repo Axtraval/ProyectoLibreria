@@ -47,8 +47,8 @@ public class Main {
 
                 case 4:
                     System.out.print("Número del libro a eliminar: ");
-                    int numDel = leer.nextInt();
-                    biblioteca.removeIf(l -> l.getID() == numDel);
+                    int idDel = leer.nextInt();
+                    biblioteca.removeIf(l -> l.getID() == idDel);
                     System.out.println("Eliminado.");
                     break;
             }
