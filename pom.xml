@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.proyecto.proyectolibreria/com.proyecto.proyectolibreria.HelloApplication
+                            <mainClass>com.proyecto.proyectolibreria/com.proyecto.proyectolibreria.Crudlect.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

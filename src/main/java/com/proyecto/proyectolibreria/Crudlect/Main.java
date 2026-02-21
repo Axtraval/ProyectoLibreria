@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Libro> biblioteca = new ArrayList<>();
         Scanner leer = new Scanner(System.in);
-        int opcion, contadorNum = 1;
+        int opcion, contadorId = 1;
 
         do {
             System.out.println("\n--- SISTEMA PUBLICADOR ---");
@@ -24,7 +24,7 @@ public class Main {
                 case 1:
                     System.out.print("Nombre del libro: ");
                     String titulo = leer.nextLine();
-                    biblioteca.add(new Libro(contadorNum++, titulo));
+                    biblioteca.add(new Libro(contadorId++, titulo));
                     System.out.println("¡Publicado con éxito!");
                     break;
 
@@ -35,10 +35,10 @@ public class Main {
 
                 case 3:
                     System.out.print("Número del libro a modificar: ");
-                    int numMod = leer.nextInt();
+                    int idMod = leer.nextInt();
                     leer.nextLine();
                     for (Libro l : biblioteca) {
-                        if (l.getNum() == numMod) {
+                        if (l.getID() == idMod) {
                             System.out.print("Nuevo título: ");
                             l.setTitulo(leer.nextLine());
                         }
@@ -48,7 +48,7 @@ public class Main {
                 case 4:
                     System.out.print("Número del libro a eliminar: ");
                     int numDel = leer.nextInt();
-                    biblioteca.removeIf(l -> l.getNum() == numDel);
+                    biblioteca.removeIf(l -> l.getID() == numDel);
                     System.out.println("Eliminado.");
                     break;
             }

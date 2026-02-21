@@ -1,20 +1,19 @@
 package com.proyecto.proyectolibreria.Crudlect;
 
 public class Libro {
-    private int num;
+    private int id;
     private String titulo;
 
     public Libro(int num, String titulo) {
-        this.num = num;
+        this.id = id;
         this.titulo = titulo;
     }
 
-    public int getNum() { return num; }
-    public String getTitulo() { return titulo; }
-    public void setTitulo(String titulo) { this.titulo = titulo; }
+    public int getID() {
+        return id; }
+    public String getTitulo() {
+        return titulo; }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo; }
 
-    @Override
-    public String toString() {
-        return "Número: " + num + " | Título: " + titulo;
-    }
 }
