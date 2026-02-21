@@ -18,7 +18,8 @@ public abstract class Libro {
 
     //metodos
     public abstract String mostrarInfo();
-    public String MostrarPrecio(){return "El libro cuesta "+precio+" puntos"; }
+    public abstract String MostrarPrecio();
+    public abstract String mostrarcontenido();
 
     public int getAnio() {return anio;}
         public String getAutor() {return autor;}

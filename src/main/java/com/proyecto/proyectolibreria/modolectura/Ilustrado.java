@@ -18,13 +18,27 @@ public class Ilustrado extends Libro{
     }
 
     public String Formato(){
-        if (!isAcolor){return "no es a color";}
-        else return "es a color";
+        if (!isAcolor){return " [no es a color]";}
+        else return " [es a color]";
     }
 
     @Override
-    public String mostrarInfo(){return titulo+""+precio+""+isAcolor+frecuency()+Formato();}
+
+    public String mostrarInfo(){return "\n"+titulo+" |Autor: "+autor+" |Genero: "+genero+MostrarPrecio()+" "+frecuency()+Formato()+mostrarcontenido()+"\n";}
+
+
+    public String MostrarPrecio() {
+        return " |El libro cuesta "+precio+" puntos|";
+    }
+
+
+    public String mostrarcontenido() {
+        return "\nMostrando contenido de "+titulo+" \n\t[Image]..";
+    }
+
     public String frecuency(){
-        return "La frecuencia de actualización es de "+frecuency+" veces por semana";
+        if(frecuency==1){
+            return "La frecuencia de actualización es de "+frecuency+" vez por semana";
+        } else return "La frecuencia de actualización es de "+frecuency+" veces por semana";
     }
 }

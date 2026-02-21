@@ -6,11 +6,16 @@ public class Lectura extends Libro{
 
     }
 
+    @Override
     public String mostrarcontenido(){
-        return "mostrando contenido de "+titulo;
+        return "\nMostrando contenido de "+titulo+" \n\tHabia una vez...";
     }
 
-    public String mostrarInfo(){return titulo+""+autor+""+genero;}
+    public String mostrarInfo(){return "\n"+titulo+" |Autor: "+autor+" |Genero: "+genero+MostrarPrecio()+mostrarcontenido()+"\n";}
+
+    public String MostrarPrecio() {
+        return " |El libro cuesta "+precio+" puntos|";}
+
 
 
 }
