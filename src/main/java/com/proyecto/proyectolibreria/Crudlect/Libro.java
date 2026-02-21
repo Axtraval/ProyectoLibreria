@@ -9,7 +9,6 @@ public class Libro {
         this.titulo = titulo;
     }
 
-
     public int getNum() { return num; }
     public String getTitulo() { return titulo; }
     public void setTitulo(String titulo) { this.titulo = titulo; }
