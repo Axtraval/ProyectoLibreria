@@ -9,7 +9,7 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    public int getID() {
+    public int getId() {
         return id; }
     public String getTitulo() {
         return titulo; }

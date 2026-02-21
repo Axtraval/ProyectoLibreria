@@ -38,7 +38,7 @@ public class Main {
                     int idMod = leer.nextInt();
                     leer.nextLine();
                     for (Libro l : biblioteca) {
-                        if (l.getID() == idMod) {
+                        if (l.getId() == idMod) {
                             System.out.print("Nuevo título: ");
                             l.setTitulo(leer.nextLine());
                         }
@@ -48,7 +48,7 @@ public class Main {
                 case 4:
                     System.out.print("Número del libro a eliminar: ");
                     int idDel = leer.nextInt();
-                    biblioteca.removeIf(l -> l.getID() == idDel);
+                    biblioteca.removeIf(l -> l.getId() == idDel);
                     System.out.println("Eliminado.");
                     break;
             }
