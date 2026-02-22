@@ -3,9 +3,9 @@ package com.proyecto.proyectolibreria.Crudlect;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class Main_dsh {
     public static void main(String[] args) {
-        ArrayList<Libro> biblioteca = new ArrayList<>();
+        ArrayList<Libro_dsh> biblioteca = new ArrayList<>();
         Scanner leer = new Scanner(System.in);
         int opcion, contadorId = 1;
 
@@ -24,20 +24,20 @@ public class Main {
                 case 1:
                     System.out.print("Nombre del libro: ");
                     String titulo = leer.nextLine();
-                    biblioteca.add(new Libro(contadorId++, titulo));
+                    biblioteca.add(new Libro_dsh(contadorId++, titulo));
                     System.out.println("¡Publicado con éxito!");
                     break;
 
                 case 2:
                     System.out.println("--- Lista de Libros ---");
-                    for (Libro l : biblioteca) System.out.println(l);
+                    for (Libro_dsh l : biblioteca) System.out.println(l);
                     break;
 
                 case 3:
                     System.out.print("Número del libro a modificar: ");
                     int idMod = leer.nextInt();
                     leer.nextLine();
-                    for (Libro l : biblioteca) {
+                    for (Libro_dsh l : biblioteca) {
                         if (l.getId() == idMod) {
                             System.out.print("Nuevo título: ");
                             l.setTitulo(leer.nextLine());

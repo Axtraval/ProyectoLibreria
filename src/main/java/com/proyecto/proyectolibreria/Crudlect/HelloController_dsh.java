@@ -6,15 +6,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class HelloController {
+public class HelloController_dsh {
 
-    @FXML private TableView<Libro> tablaLibros;
-    @FXML private TableColumn<Libro, Integer> colId;
-    @FXML private TableColumn<Libro, String> colTitulo;
+    @FXML private TableView<Libro_dsh> tablaLibros;
+    @FXML private TableColumn<Libro_dsh, Integer> colId;
+    @FXML private TableColumn<Libro_dsh, String> colTitulo;
     @FXML private TextField txtTitulo;
 
 
-    private ObservableList<Libro> listaLibros = FXCollections.observableArrayList();
+    private ObservableList<Libro_dsh> listaLibroDshes = FXCollections.observableArrayList();
     private int contadorId = 1;
 
     @FXML
@@ -23,21 +23,21 @@ public class HelloController {
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colTitulo.setCellValueFactory(new PropertyValueFactory<>("titulo"));
 
-        tablaLibros.setItems(listaLibros);
+        tablaLibros.setItems(listaLibroDshes);
     }
 
     @FXML
     protected void onPublicarClick() {
         String nombre = txtTitulo.getText();
         if (!nombre.isEmpty()) {
-            listaLibros.add(new Libro(contadorId++, nombre));
+            listaLibroDshes.add(new Libro_dsh(contadorId++, nombre));
             txtTitulo.clear();
         }
     }
 
     @FXML
     protected void onModificarClick() {
-        Libro seleccionado = tablaLibros.getSelectionModel().getSelectedItem();
+        Libro_dsh seleccionado = tablaLibros.getSelectionModel().getSelectedItem();
         String nuevoTitulo = txtTitulo.getText();
         if (seleccionado != null && !nuevoTitulo.isEmpty()) {
             seleccionado.setTitulo(nuevoTitulo);
@@ -51,9 +51,9 @@ public class HelloController {
 
     @FXML
     protected void onEliminarClick() {
-        Libro seleccionado = tablaLibros.getSelectionModel().getSelectedItem();
+        Libro_dsh seleccionado = tablaLibros.getSelectionModel().getSelectedItem();
         if (seleccionado != null) {
-            listaLibros.remove(seleccionado);
+            listaLibroDshes.remove(seleccionado);
         }
     }
 }
