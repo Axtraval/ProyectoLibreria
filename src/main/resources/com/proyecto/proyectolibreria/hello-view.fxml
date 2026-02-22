@@ -13,7 +13,11 @@
 
     <Label fx:id="welcomeText"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
+=======
+    <Button text="Ver info*" onAction="#onMostrarLibrosClick"/>
+>>>>>>> Stashed changes
 =======
     <Button text="Ver info*" onAction="#onMostrarLibrosClick"/>
 >>>>>>> Stashed changes
