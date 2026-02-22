@@ -11,12 +11,13 @@ public class Libro {
     }
 
     public int getId() {
-        return id; }
+        return id;
+    }
     public String getTitulo() {
-        return titulo; }
+        return titulo;
+    }
     public void setTitulo(String titulo) {
-        this.titulo = titulo; }
-
-
+        this.titulo = titulo;
+    }
 
 }
