@@ -5,4 +5,5 @@ module com.proyecto.proyectolibreria {
 
     opens com.proyecto.proyectolibreria to javafx.fxml;
     exports com.proyecto.proyectolibreria;
+
 }

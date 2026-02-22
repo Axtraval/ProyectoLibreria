@@ -13,7 +13,7 @@ public class HelloController {
     private ListView<String> librosList;
 
     @FXML
-    private Label welcomeText;
+    private Label wwelcomeText;
     private ArrayList<Libro> libros;
 
     public HelloController(ArrayList<Libro> libros){
@@ -28,7 +28,7 @@ public class HelloController {
     }
     @FXML
     public void initialize(){
-        welcomeText.setText("bienvenido a la lista");
+        wwelcomeText.setText("bienvenido a la lista");
 
         }
 
@@ -42,13 +42,13 @@ public class HelloController {
 
 
     @FXML
-    protected void onMostrarLibrosClick() {
+    protected void onMostrarLibrosClicked() {
         int index = librosList.getSelectionModel().getSelectedIndex();
         if (index >= 0) {
             Libro seleccionado = libros.get(index);
-            welcomeText.setText(seleccionado.mostrarInfo());
+            wwelcomeText.setText(seleccionado.mostrarInfo());
         } else {
-            welcomeText.setText("No has seleccionado ningún libro.");
+            wwelcomeText.setText("No has seleccionado ningún libro.");
         }
 
 
