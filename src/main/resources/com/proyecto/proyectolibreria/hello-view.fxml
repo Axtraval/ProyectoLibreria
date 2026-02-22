@@ -12,5 +12,9 @@
     </padding>
 
     <Label fx:id="welcomeText"/>
+<<<<<<< Updated upstream
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
+=======
+    <Button text="Ver info*" onAction="#onMostrarLibrosClick"/>
+>>>>>>> Stashed changes
 </VBox>
