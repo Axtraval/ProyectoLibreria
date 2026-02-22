@@ -16,7 +16,6 @@ public class Libro_dsh {
     public String getTitulo() {
         return titulo;
     }
-
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
