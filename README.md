@@ -23,3 +23,23 @@
 
 
 ---
+
+##**EJEMPLO DE INTERFACES IMPLEMENTADAS**
+
+##*INTERFAZ 1*
+
+(![WhatsApp Image 2026-02-21 at 10 34 17 PM](https://github.com/user-attachments/assets/24c9edd2-1f3b-4ca9-86b8-2a4f3f38839a)
+)
+--
+##*INTERFAZ 2*
+
+(![WhatsApp Image 2026-02-21 at 10 35 26 PM (1)](https://github.com/user-attachments/assets/22cfd6d6-f8ed-4dd2-b227-af622aebf7da)
+)
+--
+
+##*INTERFAZ 3*
+
+(![WhatsApp Image 2026-02-21 at 10 40 20 PM](https://github.com/user-attachments/assets/a771675f-ce42-410a-aa03-e975544f3f2c)
+
+)
+--
