@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-border-color: blue; -fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.Controllers.Crud_Ingreso.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="MyReadingBook 📚">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font></Label>
+    <Button onAction="#login" style="-fx-background-color: white; -fx-border-color: black;" text="Haz Clic Para Iniciar" textFill="#0d0669" />
+</VBox>
