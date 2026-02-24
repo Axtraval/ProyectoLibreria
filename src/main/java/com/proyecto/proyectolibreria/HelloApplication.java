@@ -16,8 +16,53 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
 
         ArrayList<Libro> libritos = new ArrayList<>();
+        //agregar frecuencia y isacolor (booleano)
         libritos.add(new Ilustrado("havana","camilo","fantasia",20,1990,false,3));
         libritos.add(new Lectura("bibiu","bollie","romance",15, 2005));
+        libritos.add(new Ilustrado("El Hobbit (Edicion Ilustrada)", "J.R.R. Tolkien", "Fantasia", 1000, 1937));
+        libritos.add(new Ilustrado("Harry Potter Y La Piedra Filosofal (Edicion Ilustrada)", "J.K. Rowling", "Fantasia", 900, 1997, false,4));
+        listaIlustrado.add(new Ilustrado("El Principe Cruel (Edicion Ilustrada)", "Holly Black", "Fantasia", 700, 2018));
+        listaIlustrado.add(new Ilustrado("Star Wars Archives (Edicion Ilustrada)", "Paul Duncan", "Ciencia Ficcion", 600, 2020));
+        listaIlustrado.add(new Ilustrado("Ready Player One (Edicion Ilustrada)", "Ernest Cline", "Ciencia Ficcion", 750, 2011));
+        listaIlustrado.add(new Ilustrado("Atlas del Futuro (Edicion Ilustrada)", "Chris Wormell", "Ciencia Ficcion", 950, 2023));
+        listaIlustrado.add(new Ilustrado("Sherlock Holmes (Edicion Ilustrada)", "Arthur Conan Doyle", "Misterio", 650, 1887));
+        listaIlustrado.add(new Ilustrado("Nancy Drew", "Carolyn Keene", "Misterio", 600, 1930));
+        listaIlustrado.add(new Ilustrado("El Libro DeLa Selva", "Rudyard Kipling", "Aventura", 500, 1894));
+        listaIlustrado.add(new Ilustrado("La Dama y el Vagabundo (Ilustrado)", "Disney", "Romance", 550, 1955));
+        listaIlustrado.add(new Ilustrado("Orgullo y Prejuicio (Ilustrado)", "Jane Austen", "Romance", 700, 1813));
+        listaIlustrado.add(new Ilustrado("Romeo y Julieta (Edicion Grafica)", "William Shakespeare", "Romance", 800, 1597));
+        listaIlustrado.add(new Ilustrado("Coraline (Novela Grafica)", "Neil Gaiman", "Terror", 750, 2002));
+        listaIlustrado.add(new Ilustrado("El Gato Negro (Edicion Ilustrada)", "Edgar Allan Poe", "Terror", 650, 1843));
+        listaIlustrado.add(new Ilustrado("It (Edicion Ilustrada)", "Stephen King", "Terror", 1200, 1986));
+        listaLecturas.add(new Lectura("El Nombre del Viento", "Patrick Rothfuss", "Fantasia", 700, 2007));
+
+        listaLecturas.add(new Lectura("La Quinta Estacion", "N.K. Jemisin", "Fantasia", 650, 2015));
+
+        listaLecturas.add(new Lectura("El Temor de un Hombre Sabio", "Patrick Rothfuss", "Fantasia", 750, 2011));
+
+        listaLecturas.add(new Lectura("Dune", "Frank Herbert", "Ciencia Ficcion", 850, 1965));
+
+        listaLecturas.add(new Lectura("Neuromante", "William Gibson", "Ciencia Ficcion", 600, 1984));
+
+        listaLecturas.add(new Lectura("Fundacion", "Isaac Asimov", "Ciencia Ficcion", 700, 1951));
+
+        listaLecturas.add(new Lectura("El Codigo Da Vinci", "Dan Brown", "Misterio", 650, 2003));
+
+        listaLecturas.add(new Lectura("La Chica del Tren", "Paula Hawkins", "Misterio", 600, 2015));
+
+        listaLecturas.add(new Lectura("Asesinato en el Orient Express", "Agatha Christie", "Misterio", 550, 1934));
+
+        listaLecturas.add(new Lectura("Bajo la Misma Estrella", "John Green", "Romance", 500, 2012));
+
+        listaLecturas.add(new Lectura("El Cuaderno de Noah", "Nicholas Sparks", "Romance", 550, 1996));
+
+        listaLecturas.add(new Lectura("Orgullo y Prejuicio", "Jane Austen", "Romance", 450, 1813));
+
+        listaLecturas.add(new Lectura("It", "Stephen King", "Terror", 1100, 1986));
+
+        listaLecturas.add(new Lectura("El Exorcista", "William Peter Blatty", "Terror", 800, 1971));
+
+        listaLecturas.add(new Lectura("Cementerio de Animales", "Stephen King", "Terror", 900, 1983));
 
         FXMLLoader fxmlLoader = new FXMLLoader(
                 HelloApplication.class.getResource("hello-view.fxml")
