@@ -35,33 +35,19 @@ public class HelloApplication extends Application {
         libritos.add(new Ilustrado("El Gato Negro (Edicion Ilustrada)", "Edgar Allan Poe", "Terror", 650, 1843, true, 1));
         libritos.add(new Ilustrado("It (Edicion Ilustrada)", "Stephen King", "Terror", 1200, 1986, false, 3));
         libritos.add(new Lectura("El Nombre del Viento", "Patrick Rothfuss", "Fantasia", 700, 2007));
-
         libritos.add(new Lectura("La Quinta Estacion", "N.K. Jemisin", "Fantasia", 650, 2015));
-
         libritos.add(new Lectura("El Temor de un Hombre Sabio", "Patrick Rothfuss", "Fantasia", 750, 2011));
-
         libritos.add(new Lectura("Dune", "Frank Herbert", "Ciencia Ficcion", 850, 1965));
-
         libritos.add(new Lectura("Neuromante", "William Gibson", "Ciencia Ficcion", 600, 1984));
-
         libritos.add(new Lectura("Fundacion", "Isaac Asimov", "Ciencia Ficcion", 700, 1951));
-
         libritos.add(new Lectura("El Codigo Da Vinci", "Dan Brown", "Misterio", 650, 2003));
-
         libritos.add(new Lectura("La Chica del Tren", "Paula Hawkins", "Misterio", 600, 2015));
-
         libritos.add(new Lectura("Asesinato en el Orient Express", "Agatha Christie", "Misterio", 550, 1934));
-
         libritos.add(new Lectura("Bajo la Misma Estrella", "John Green", "Romance", 500, 2012));
-
         libritos.add(new Lectura("El Cuaderno de Noah", "Nicholas Sparks", "Romance", 550, 1996));
-
         libritos.add(new Lectura("Orgullo y Prejuicio", "Jane Austen", "Romance", 450, 1813));
-
         libritos.add(new Lectura("It", "Stephen King", "Terror", 1100, 1986));
-
         libritos.add(new Lectura("El Exorcista", "William Peter Blatty", "Terror", 800, 1971));
-
         libritos.add(new Lectura("Cementerio de Animales", "Stephen King", "Terror", 900, 1983));
 
         FXMLLoader fxmlLoader = new FXMLLoader(
