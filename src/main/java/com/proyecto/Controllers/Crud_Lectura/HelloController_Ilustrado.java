@@ -3,8 +3,8 @@ package com.proyecto.Controllers.Crud_Lectura;
 import com.proyecto.Clases.Material_Lectura.Ilustrado;
 import com.proyecto.Clases.Material_Lectura.Lectura;
 import com.proyecto.Clases.Material_Lectura.Libro;
-import com.proyecto.Clases.UtilsDsh.Libro_dsh;
 import com.proyecto.Controllers.InfoLibro.HelloController_InfoLibro;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,40 +20,41 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class HelloController_dsh {
+public class HelloController_Ilustrado {
 
-    @FXML private TableView<Libro_dsh> tablaLibros;
+    @FXML private TableView<Ilustrado> tablaLibros;
 
-    @FXML private TableColumn<Libro_dsh, Integer> colId;
-    @FXML private TableColumn<Libro_dsh, String> colTitulo;
-    @FXML private TableColumn<Libro_dsh, Integer> colAnio;
-    @FXML private TableColumn<Libro_dsh, String> colAutor;
-    @FXML private TableColumn<Libro_dsh, String> colGenero;
-    @FXML private TableColumn<Libro_dsh, Integer> colPuntos;
+    @FXML private TableColumn<Ilustrado, String> colTitulo;
+    @FXML private TableColumn<Ilustrado, Integer> colAnio;
+    @FXML private TableColumn<Ilustrado, String> colAutor;
+    @FXML private TableColumn<Ilustrado, String> colGenero;
+    @FXML private TableColumn<Ilustrado, Integer> colPuntos;
+    @FXML private TableColumn<Ilustrado, Boolean> colAcolor;
+    @FXML private TableColumn<Ilustrado, Integer> colFrecuencia;
 
     @FXML private TextField txtTitulo;
     @FXML private TextField txtAnio;
     @FXML private TextField txtAutor;
     @FXML private TextField txtGenero;
     @FXML private TextField txtPuntos;
+    @FXML private TextField txtFrecuencia;
 
-    private ObservableList<Libro_dsh> listaLibroDshes = FXCollections.observableArrayList();
-    private Funciones_Logica servicio = new Funciones_Logica();
+    @FXML private CheckBox checkAcolor;
+
+    private ObservableList<Ilustrado> listaIlustrados = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
 
-        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colTitulo.setCellValueFactory(new PropertyValueFactory<>("titulo"));
         colAnio.setCellValueFactory(new PropertyValueFactory<>("anio"));
         colAutor.setCellValueFactory(new PropertyValueFactory<>("autor"));
         colGenero.setCellValueFactory(new PropertyValueFactory<>("genero"));
         colPuntos.setCellValueFactory(new PropertyValueFactory<>("puntos"));
+        colAcolor.setCellValueFactory(new PropertyValueFactory<>("acolor"));
+        colFrecuencia.setCellValueFactory(new PropertyValueFactory<>("frecuency"));
 
-        tablaLibros.setItems(listaLibroDshes);
-
-        // Mostrar libros al iniciar
-        listaLibroDshes.setAll(servicio.listar());
+        tablaLibros.setItems(listaIlustrados);
     }
 
     @FXML
@@ -65,42 +66,51 @@ public class HelloController_dsh {
             String autor = txtAutor.getText();
             String genero = txtGenero.getText();
             int puntos = Integer.parseInt(txtPuntos.getText());
+            int frecuencia = Integer.parseInt(txtFrecuencia.getText());
+            boolean esAcolor = checkAcolor.isSelected();
 
-            if (!titulo.isEmpty() && !autor.isEmpty() && !genero.isEmpty()) {
+            Ilustrado nuevo = new Ilustrado(
+                    titulo,
+                    autor,
+                    genero,
+                    puntos,
+                    anio,
+                    esAcolor,
+                    frecuencia
+            );
 
-                servicio.publicar(titulo, anio, autor, genero, puntos);
-                listaLibroDshes.setAll(servicio.listar());
+            listaIlustrados.add(nuevo);
+            limpiarCampos();
 
-                limpiarCampos();
-                mostrarInfo("Éxito", "Libro publicado correctamente.");
-            }
+            mostrarInfo("Éxito", "Libro ilustrado agregado correctamente.");
 
         } catch (NumberFormatException e) {
-            mostrarAlerta("Error", "Año y Puntos deben ser números.");
+            mostrarAlerta("Error", "Año, Puntos y Frecuencia deben ser números.");
         }
     }
 
     @FXML
     protected void onModificarClick() {
 
-        Libro_dsh seleccionado = tablaLibros.getSelectionModel().getSelectedItem();
+        Ilustrado seleccionado = tablaLibros.getSelectionModel().getSelectedItem();
 
         if (seleccionado != null) {
             try {
-                String titulo = txtTitulo.getText();
-                int anio = Integer.parseInt(txtAnio.getText().trim());
-                String autor = txtAutor.getText();
-                String genero = txtGenero.getText();
-                int puntos = Integer.parseInt(txtPuntos.getText().trim());
+                seleccionado.setTitulo(txtTitulo.getText());
+                seleccionado.setAutor(txtAutor.getText());
+                seleccionado.setGenero(txtGenero.getText());
+                seleccionado.setPuntos(Integer.parseInt(txtPuntos.getText()));
+                seleccionado.setAnio(Integer.parseInt(txtAnio.getText()));
+                seleccionado.setImgVisualized(checkAcolor.isSelected());
+                seleccionado.setFrecuency(Integer.parseInt(txtFrecuencia.getText()));
 
-                servicio.modificar(seleccionado.getId(), titulo, anio, autor, genero, puntos);
-                listaLibroDshes.setAll(servicio.listar());
-
+                tablaLibros.refresh();
                 limpiarCampos();
-                mostrarInfo("Éxito", "Libro modificado correctamente.");
+
+                mostrarInfo("Éxito", "Libro ilustrado modificado.");
 
             } catch (NumberFormatException e) {
-                mostrarAlerta("Error", "Año y Puntos deben ser números.");
+                mostrarAlerta("Error", "Datos numéricos inválidos.");
             }
         } else {
             mostrarInfo("Información", "Selecciona un libro para modificar.");
@@ -110,13 +120,11 @@ public class HelloController_dsh {
     @FXML
     protected void onEliminarClick() {
 
-        Libro_dsh seleccionado = tablaLibros.getSelectionModel().getSelectedItem();
+        Ilustrado seleccionado = tablaLibros.getSelectionModel().getSelectedItem();
 
         if (seleccionado != null) {
-            servicio.eliminar(seleccionado.getId());
-            listaLibroDshes.setAll(servicio.listar());
-
-            mostrarInfo("Éxito", "Libro eliminado correctamente.");
+            listaIlustrados.remove(seleccionado);
+            mostrarInfo("Éxito", "Libro eliminado.");
         } else {
             mostrarInfo("Información", "Selecciona un libro para eliminar.");
         }
@@ -183,6 +191,8 @@ public class HelloController_dsh {
         txtAutor.clear();
         txtGenero.clear();
         txtPuntos.clear();
+        txtFrecuencia.clear();
+        checkAcolor.setSelected(false);
     }
 
     private void mostrarAlerta(String titulo, String mensaje) {
@@ -197,5 +207,19 @@ public class HelloController_dsh {
         alert.setTitle(titulo);
         alert.setContentText(mensaje);
         alert.showAndWait();
+    }
+
+    @FXML
+    protected void onVolverClick(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/com/proyecto/Interfaces/publicar.fxml")
+        );
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }

@@ -60,7 +60,6 @@ public class LoginController {
 
             mensaje.setText("Acceso Concedido");
 
-            // 🔹 Cargar segunda interfaz
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/com/proyecto/Interfaces/publicar.fxml")
             );

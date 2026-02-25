@@ -41,4 +41,7 @@ public class Ilustrado extends Libro{
             return "La frecuencia de actualización es de "+frecuency+" vez por semana";
         } else return "La frecuencia de actualización es de "+frecuency+" veces por semana";
     }
+
+    public void setFrecuency(int i) {
+    }
 }
