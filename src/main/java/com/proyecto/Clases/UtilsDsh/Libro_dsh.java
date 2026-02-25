@@ -1,4 +1,4 @@
-package com.proyecto.proyectolibreria.Crudlect;
+package com.proyecto.Clases.UtilsDsh;
 
 public class Libro_dsh {
 

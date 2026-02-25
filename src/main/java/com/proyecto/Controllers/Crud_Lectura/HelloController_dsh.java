@@ -1,5 +1,6 @@
-package com.proyecto.proyectolibreria.Crudlect;
+package com.proyecto.Controllers.Crud_Lectura;
 
+import com.proyecto.Clases.UtilsDsh.Libro_dsh;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

@@ -1,4 +1,4 @@
-package com.proyecto.crud_ingreso.model;
+package com.proyecto.Clases;
 
 public class Usuario {
 

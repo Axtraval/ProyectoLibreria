@@ -1,4 +1,4 @@
-package com.proyecto.crud_ingreso;
+package com.proyecto.Controllers.Crud_Ingreso;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,7 +16,7 @@ public class HelloController {
     private void login(ActionEvent event) throws IOException {
 
         Parent root = FXMLLoader.load(
-                getClass().getResource("login-view.fxml")
+                getClass().getResource("/com/proyecto/Interfaces/login-view.fxml")
         );
 
         Stage stage = (Stage) ((Node) event.getSource())

@@ -4,7 +4,7 @@
 <?import javafx.geometry.Insets?>
 
 <VBox spacing="15" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.proyecto.proyectolibreria.Crudlect.HelloController_dsh">
+      fx:controller="com.proyecto.Controllers.Crud_Lectura.HelloController_dsh">
 
     <padding>
         <Insets bottom="20" left="20" right="20" top="20"/>

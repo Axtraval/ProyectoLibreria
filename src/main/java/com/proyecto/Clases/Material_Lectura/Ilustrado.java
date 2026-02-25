@@ -1,4 +1,4 @@
-package com.proyecto.proyectolibreria.modolectura;
+package com.proyecto.Clases.Material_Lectura;
 
 public class Ilustrado extends Libro{
     boolean isAcolor=true;

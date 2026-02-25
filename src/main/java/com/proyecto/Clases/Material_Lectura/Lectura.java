@@ -1,4 +1,4 @@
-package com.proyecto.proyectolibreria.modolectura;
+package com.proyecto.Clases.Material_Lectura;
 
 public class Lectura extends Libro{
     public Lectura(String titulo, String autor, String genero, int precio, int anio){

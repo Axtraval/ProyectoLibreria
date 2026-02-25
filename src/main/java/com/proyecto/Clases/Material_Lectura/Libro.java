@@ -1,4 +1,4 @@
-package com.proyecto.proyectolibreria.modolectura;
+package com.proyecto.Clases.Material_Lectura;
 
 public abstract class Libro {
 

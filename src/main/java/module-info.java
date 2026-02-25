@@ -2,12 +2,16 @@ module com.proyecto.proyectolibreria {
 
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
-    opens com.proyecto.crud_ingreso to javafx.fxml;
-    exports com.proyecto.crud_ingreso;
 
-    opens com.proyecto.crud_ingreso.controller to javafx.fxml;
+    opens com.proyecto.Controllers.Crud_Ingreso to javafx.fxml;
+    opens com.proyecto.Controllers.Crud_Lectura to javafx.fxml;
+    opens com.proyecto.Controllers.InfoLibro to javafx.fxml;
 
-    opens com.proyecto.proyectolibreria.Crudlect to javafx.fxml;
-    exports com.proyecto.proyectolibreria.Crudlect;
+    exports com.proyecto.Clases.Clientes;
+    exports com.proyecto.Clases.Material_Lectura;
+    exports com.proyecto.Clases.UtilsDsh;
+
+    exports com.proyecto.Starters;
 }

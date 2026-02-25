@@ -1,17 +1,17 @@
-package com.proyecto.crud_ingreso;
+package com.proyecto.Starters;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class HelloApplication extends Application {
+public class HelloApplication_alex extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
 
         FXMLLoader fxmlLoader = new FXMLLoader(
-                HelloApplication.class.getResource("hello-view.fxml")
+                HelloApplication_alex.class.getResource("/com/proyecto/Interfaces/hello-view.fxml")
         );
 
         Scene scene = new Scene(fxmlLoader.load());

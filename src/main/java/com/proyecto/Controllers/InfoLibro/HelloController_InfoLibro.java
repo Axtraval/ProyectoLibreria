@@ -1,5 +1,5 @@
-package com.proyecto.proyectolibreria;
-import com.proyecto.proyectolibreria.modolectura.Libro;
+package com.proyecto.Controllers.InfoLibro;
+import com.proyecto.Clases.Material_Lectura.Libro;
 
 
 import javafx.fxml.FXML;
@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import java.util.ArrayList;
 import javafx.scene.control.ListView;
 
-public class HelloController {
+public class HelloController_InfoLibro {
 
     @FXML
     private ListView<String> librosList;
@@ -16,10 +16,10 @@ public class HelloController {
     private Label welcomeText;
     private ArrayList<Libro> libros;
 
-    public HelloController(ArrayList<Libro> libros){
+    public HelloController_InfoLibro(ArrayList<Libro> libros){
         this.libros = libros;
     }
-    public HelloController(){
+    public HelloController_InfoLibro(){
 
     }
 
@@ -28,7 +28,7 @@ public class HelloController {
     }
     @FXML
     public void initialize(){
-        welcomeText.setText("bienvenido a la lista");
+        welcomeText.setText("Bienvenido a la Biblioteca");
 
         }
 

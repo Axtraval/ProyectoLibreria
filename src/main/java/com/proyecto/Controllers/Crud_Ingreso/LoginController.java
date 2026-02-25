@@ -1,6 +1,6 @@
-package com.proyecto.crud_ingreso.controller;
+package com.proyecto.Controllers.Crud_Ingreso;
 
-import com.proyecto.crud_ingreso.model.Usuario;
+import com.proyecto.Clases.Usuario;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
