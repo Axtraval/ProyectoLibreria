@@ -2,6 +2,7 @@ package com.proyecto.Controllers.InfoLibro;
 import com.proyecto.Clases.Material_Lectura.Libro;
 
 
+import com.proyecto.Clases.UtilsDsh.Libro_dsh;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class HelloController_InfoLibro {
         public void cargarLibros(){
             if (libros != null) {
                 for (Libro libro : libros) {
-                    librosList.getItems().add(libro.getTitulo()); // solo título
+                    librosList.getItems().add(libro.getTitulo());
                 }
             }
         }
@@ -53,4 +54,5 @@ public class HelloController_InfoLibro {
 
 
     }
+
 }
