@@ -1,4 +1,4 @@
-package com.proyecto.proyectolibreria.Crudlect;
+package com.proyecto.Clases.Material_Lectura;
 import java.util.ArrayList;
 
 public class Lector {

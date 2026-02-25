@@ -1,5 +1,5 @@
 package com.proyecto.proyectolibreria.basedatos;
-import com.proyecto.proyectolibreria.Crudlect.Lector;
+import com.proyecto.Clases.Material_Lectura.Lector;
 import java.util.ArrayList;
 
 public class BasedeDatos {
