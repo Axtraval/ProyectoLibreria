@@ -1,22 +1,31 @@
 package com.proyecto.Clases.UtilsDsh;
+import com.proyecto.Clases.Material_Lectura.Libro;
 
-public class Libro_dsh {
-
+public class Libro_dsh extends Libro {
     private int id;
-    private String titulo;
-
-    public Libro_dsh(int id, String titulo) {
+    public Libro_dsh(int id, String titulo, int anio, String autor, String genero, int precio) {
+        super(titulo, autor, genero, precio, anio);
         this.id = id;
-        this.titulo = titulo;
+
     }
 
-    public int getId() {
-        return id;
+    public int getId() { return id; }
+
+    @Override
+    public String mostrarInfo() {
+        return "";
     }
-    public String getTitulo() {
-        return titulo;
+
+    @Override
+    public String MostrarPrecio() {
+        return "";
     }
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+
+    @Override
+    public String mostrarcontenido() {
+        return "";
     }
+
+
+
 }

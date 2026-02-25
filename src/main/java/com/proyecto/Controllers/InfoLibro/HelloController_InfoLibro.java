@@ -2,10 +2,19 @@ package com.proyecto.Controllers.InfoLibro;
 import com.proyecto.Clases.Material_Lectura.Libro;
 
 
+import com.proyecto.Clases.UtilsDsh.Libro_dsh;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import javafx.scene.control.ListView;
+import javafx.stage.Stage;
 
 public class HelloController_InfoLibro {
 
@@ -35,7 +44,7 @@ public class HelloController_InfoLibro {
         public void cargarLibros(){
             if (libros != null) {
                 for (Libro libro : libros) {
-                    librosList.getItems().add(libro.getTitulo()); // solo título
+                    librosList.getItems().add(libro.getTitulo());
                 }
             }
         }
@@ -53,4 +62,21 @@ public class HelloController_InfoLibro {
 
 
     }
+    @FXML
+    private void onVolverClick(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/com/proyecto/Interfaces/publicar.fxml")
+            );
+
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

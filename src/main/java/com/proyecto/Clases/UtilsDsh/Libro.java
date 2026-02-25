@@ -1,5 +1,5 @@
 package com.proyecto.Clases.UtilsDsh;
-
+//alex este creo q hay q borrarlo
 public class Libro {
 
     private int id;
@@ -16,7 +16,5 @@ public class Libro {
         return titulo; }
     public void setTitulo(String titulo) {
         this.titulo = titulo; }
-
-
 
 }

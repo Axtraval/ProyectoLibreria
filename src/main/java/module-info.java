@@ -4,7 +4,6 @@ module com.proyecto.proyectolibreria {
     requires javafx.fxml;
     requires java.sql;
 
-
     opens com.proyecto.Controllers.Crud_Ingreso to javafx.fxml;
     opens com.proyecto.Controllers.Crud_Lectura to javafx.fxml;
     opens com.proyecto.Controllers.InfoLibro to javafx.fxml;

@@ -6,13 +6,13 @@ public abstract class Libro {
         int anio;
         String genero;
         String titulo;
-        int precio;
+        int puntos;
 
-        public Libro(String titulo,String autor, String genero, int precio, int anio){
+        public Libro(String titulo,String autor, String genero, int puntos, int anio){
             this.titulo = titulo;
             this.autor = autor;
             this.genero = genero;
-            this.precio = precio;
+            this.puntos = puntos;
             this.anio = anio;
         }
 
@@ -24,13 +24,13 @@ public abstract class Libro {
     public int getAnio() {return anio;}
         public String getAutor() {return autor;}
         public String getGenero() {return genero;}
-        public int getPrecio() {return precio;}
+        public int getPuntos() {return puntos;}
         public String getTitulo() {return titulo;}
 
         public void setAnio(int anio) {this.anio = anio;}
         public void setAutor(String autor) {this.autor = autor;}
         public void setGenero(String genero) {this.genero = genero;}
-        public void setPrecio(int precio) {this.precio = precio;}
+        public void setPuntos(int puntos) {this.puntos = puntos;}
         public void setTitulo(String titulo) {this.titulo = titulo;}
 
 
