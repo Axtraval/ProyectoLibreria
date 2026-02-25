@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.proyecto.proyectolibreria.controlador.ControlLector">
+    <TextField fx:id="txtId" promptText="ID"/>
+    <TextField fx:id="txtCorreo" promptText="Correo"/>
+    <TextField fx:id="txtEdad" promptText="Edad"/>
+
+    <Button text="Crear" onAction="#crearLector"/>
+    <Button text="Buscar" onAction="#buscar"/>
+    <Button text="Actualizar" onAction="#actualizar"/>
+    <Button text="Eliminar" onAction="#eliminar"/>
+
+    <Button text="Iniciar Lectura" onAction="#crearLector"/>
+    <Button text="Finalizar Lectura" onAction="#finalizarLectura"/>
+
+    <Label fx:id="lblMensaje"/>
+
+</VBox>
