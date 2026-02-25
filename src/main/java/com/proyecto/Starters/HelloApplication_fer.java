@@ -1,5 +1,6 @@
 package com.proyecto.Starters;
 
+import com.proyecto.Clases.Material_Lectura.Ilustrado;
 import com.proyecto.Clases.Material_Lectura.Libro;
 import com.proyecto.Clases.Material_Lectura.Lectura;
 import com.proyecto.Controllers.InfoLibro.HelloController_InfoLibro;
@@ -26,8 +27,7 @@ public class HelloApplication_fer extends Application {
         ArrayList<Libro> lista = new ArrayList<>();
 
         lista.add(new Lectura("El Principito", "Antoine de Saint-Exupéry", "Ficción", 250, 1943));
-
-        lista.add(new Lectura("1984", "George Orwell", "Distopía", 300, 1949));
+        lista.add(new Ilustrado("1984", "George Orwell", "Distopía", 300, 1949,false,3));
 
         controller.setLibros(lista);
         controller.cargarLibros();
