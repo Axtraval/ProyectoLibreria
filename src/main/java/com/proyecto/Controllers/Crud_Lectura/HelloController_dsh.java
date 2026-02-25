@@ -87,10 +87,10 @@ public class HelloController_dsh {
         if (seleccionado != null) {
             try {
                 String titulo = txtTitulo.getText();
-                int anio = Integer.parseInt(txtAnio.getText());
+                int anio = Integer.parseInt(txtAnio.getText().trim());
                 String autor = txtAutor.getText();
                 String genero = txtGenero.getText();
-                int puntos = Integer.parseInt(txtPuntos.getText());
+                int puntos = Integer.parseInt(txtPuntos.getText().trim());
 
                 servicio.modificar(seleccionado.getId(), titulo, anio, autor, genero, puntos);
                 listaLibroDshes.setAll(servicio.listar());

@@ -3,8 +3,8 @@ package com.proyecto.Clases.Material_Lectura;
 public class Ilustrado extends Libro{
     boolean isAcolor=true;
     int frecuency=0;
-    public Ilustrado(String titulo, String autor, String genero, int precio, int anio, Boolean isAcolor, int frecuency){
-        super(titulo, autor, genero, precio, anio);
+    public Ilustrado(String titulo, String autor, String genero, int puntos, int anio, Boolean isAcolor, int frecuency){
+        super(titulo, autor, genero, puntos, anio);
         this.isAcolor = isAcolor;
         this.frecuency = frecuency;
     }
@@ -28,7 +28,7 @@ public class Ilustrado extends Libro{
 
 
     public String MostrarPrecio() {
-        return " |El libro cuesta "+precio+" puntos|";
+        return " |El libro cuesta "+puntos+" puntos|";
     }
 
 

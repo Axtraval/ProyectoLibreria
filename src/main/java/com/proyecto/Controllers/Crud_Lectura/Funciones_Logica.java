@@ -24,7 +24,7 @@ public class Funciones_Logica {
                 l.setAnio(anio);
                 l.setAutor(autor);
                 l.setGenero(genero);
-                l.setPrecio(puntos);
+                l.setPuntos(puntos);
                 break;
             }
         }
