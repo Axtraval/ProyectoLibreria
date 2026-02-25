@@ -9,7 +9,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class HelloApplication_fer extends Application {
@@ -46,40 +45,20 @@ public class HelloApplication_fer extends Application {
         lista.add(new Ilustrado("El Gato Negro (Edicion Ilustrada)", "Edgar Allan Poe", "Terror", 650, 1843, true, 1));
         lista.add(new Ilustrado("It (Edicion Ilustrada)", "Stephen King", "Terror", 1200, 1986, false, 3));
         lista.add(new Lectura("El Nombre del Viento", "Patrick Rothfuss", "Fantasia", 700, 2007));
-
         lista.add(new Lectura("La Quinta Estacion", "N.K. Jemisin", "Fantasia", 650, 2015));
         lista.add(new Lectura("El Temor de un Hombre Sabio", "Patrick Rothfuss", "Fantasia", 750, 2011));
-
         lista.add(new Lectura("Dune", "Frank Herbert", "Ciencia Ficcion", 850, 1965));
-
         lista.add(new Lectura("Neuromante", "William Gibson", "Ciencia Ficcion", 600, 1984));
-
         lista.add(new Lectura("Fundacion", "Isaac Asimov", "Ciencia Ficcion", 700, 1951));
-
         lista.add(new Lectura("El Codigo Da Vinci", "Dan Brown", "Misterio", 650, 2003));
-
         lista.add(new Lectura("La Chica del Tren", "Paula Hawkins", "Misterio", 600, 2015));
-
         lista.add(new Lectura("Asesinato en el Orient Express", "Agatha Christie", "Misterio", 550, 1934));
-
         lista.add(new Lectura("Bajo la Misma Estrella", "John Green", "Romance", 500, 2012));
-
         lista.add(new Lectura("El Cuaderno de Noah", "Nicholas Sparks", "Romance", 550, 1996));
-
         lista.add(new Lectura("Orgullo y Prejuicio", "Jane Austen", "Romance", 450, 1813));
-
         lista.add(new Lectura("It", "Stephen King", "Terror", 1100, 1986));
-
         lista.add(new Lectura("El Exorcista", "William Peter Blatty", "Terror", 800, 1971));
-
         lista.add(new Lectura("Cementerio de Animales", "Stephen King", "Terror", 900, 1983));
-
-        FXMLLoader fxmlLoader = new FXMLLoader(
-//                HelloApplication.class.getResource("hello-view.fxml")
-        );
-//        Scene scene = new Scene(fxmlLoader.load(), 500, 300);
-
-//        HelloController controller = fxmlLoader.getController();
 
         controller.setLibros(lista);
         controller.cargarLibros();
