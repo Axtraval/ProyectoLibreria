@@ -23,5 +23,6 @@ public class HelloApplication_alex extends Application {
 
     public static void main(String[] args) {
         launch();
+
     }
 }  
