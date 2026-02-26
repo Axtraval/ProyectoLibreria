@@ -5,7 +5,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="536.0" prefWidth="1045.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.Controllers.InfoLibro.HelloController_InfoLibro">
+<VBox alignment="CENTER" spacing="20.0"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.proyecto.Controllers.InfoLibro.HelloController_InfoLibro">
 
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -13,18 +16,40 @@
 
     <ListView fx:id="librosList" prefHeight="200" prefWidth="400" />
 
-    <Label fx:id="welcomeText" prefHeight="134.0" prefWidth="1023.0" />
+    <Label fx:id="welcomeText" />
 
-    <Button onAction="#onMostrarLibrosClick" text="Ver info">
+    <Button text="Ver info" onAction="#onMostrarLibrosClick">
         <font>
             <Font name="System Bold" size="13.0" />
         </font>
     </Button>
 
-    <Button onAction="#onVolverClick" style="-fx-background-color: #3e495e;" text="Volver" textFill="WHITE">
+    <Button text="Inicializar lectura"
+            onAction="#onInicializarLecturaClick"
+            style="-fx-background-color: #4CAF50;"
+            textFill="WHITE">
         <font>
             <Font name="System Bold" size="13.0" />
         </font>
     </Button>
+
+    <Button text="Finalizar lectura"
+            onAction="#onFinalizarLecturaClick"
+            style="-fx-background-color: #d9534f;"
+            textFill="WHITE"/>
+
+    <Button text="Volver"
+            onAction="#onVolverClick"
+            style="-fx-background-color: #2c6cff;"
+            textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="13.0" />
+        </font>
+    </Button>
+
+    <Button text="Mostrar puntos"
+            onAction="#onMostrarPuntosClick"
+            style="-fx-background-color: #6f42c1;"
+            textFill="WHITE"/>
 
 </VBox>
