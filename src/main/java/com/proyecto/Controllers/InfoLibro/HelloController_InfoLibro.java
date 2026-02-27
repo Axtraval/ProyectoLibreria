@@ -103,7 +103,7 @@ public class HelloController_InfoLibro {
             if (timeline != null) {
                 timeline.stop();
             }
-            timeline = new Timeline(new KeyFrame(Duration.seconds(20), e -> {
+            timeline = new Timeline(new KeyFrame(Duration.seconds(5), e -> {
                 libroActual.sumarPuntoLectura();
                 welcomeText.setText("Leyendo " + libroActual.getTitulo() + " | Puntos: " + libroActual.getPuntoslectura());
             }));
